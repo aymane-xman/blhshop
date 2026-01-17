@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de commande</title>
+    <!-- Lien vers le CDN de Bootstrap 5 -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+   <style>
+    /* Ajout d'un peu de personnalisation */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #3498db93;
+}
+
+
+
+h2 {
+    color: #000000;
+}
+
+.btn-primary{
+    padding: 10px 15px;
+    margin-bottom:10px ;
+}
+
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.form-label {
+    font-weight: bold;
+}
+@media screen and (max-width: 768px){
+    .container{
+        width: auto;
+    
+
+    }
+    
+}
+
+   </style>
+</head>
+<body class="bg-dark">
+    <div class="container bg-warning">
+        <h2 class="text-center mb-4">Formulaire de commande</h2>
+        <form>
+            <!-- Nom -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control"placeholder="Entrez votre nom" required>
+            </div>
+
+            <!-- Adresse -->
+            <div class="mb-3">
+                <label for="address" class="form-label">Adresse</label>
+                <input type="text" class="form-control" placeholder="Entrez votre adresse" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telephone" class="form-label">Numero du telephone</label>
+                <input type="tel" class="form-control" required placeholder="Votre Numero de telephone">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Entrez votre email" required>
+            </div>
+            <div class="mb-3">
+                <label for="card" class="form-label">Card number</label>
+                <input type="text" class="form-control"placeholder="0000 0000 0000 0000" required>
+            </div> 
+            <!-- Produit -->
+            <div class="mb-3">
+                <label for="product" class="form-label">Produit</label>
+                <select class="form-select" required>
+                    <option value="">Sélectionnez le type de produit</option>
+                    <option value="product1">Costumes</option>
+                    <option value="product2">Sport</option>
+                    <option value="product3">Hiver</option>
+                    <option value="product3">Cadeau</option>
+                    <option value="product3">Promos</option>
+                </select>
+            </div>
+
+            <!-- Quantité -->
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantité</label>
+                <input type="number" class="form-control" min="1" value="1" max="9" required>
+            </div>
+
+            
+            
+            <!-- Bouton de soumission -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary ">SHOP</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
